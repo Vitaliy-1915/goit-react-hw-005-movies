@@ -3,7 +3,7 @@ import React from "react";
 function MovieDetailsPage() {
   return (
     <div>
-      <h1>MovieDetailsPage</h1>
+      <h1>Movie Details Page</h1>
     </div>
   );
 }
