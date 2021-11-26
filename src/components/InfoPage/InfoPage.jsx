@@ -6,12 +6,10 @@ function InfoPage() {
     <div>
       <ul>
         <li>
-          {" "}
-          <NavLink to="/movies/:movieId/cast">Cast</NavLink>{" "}
+          <NavLink to="/movies/:movieId/cast">Cast</NavLink>
         </li>
         <li>
-          {" "}
-          <NavLink to="/movies/:movieId/reviews">Reviews</NavLink>{" "}
+          <NavLink to="/movies/:movieId/reviews">Reviews</NavLink>
         </li>
       </ul>
     </div>
