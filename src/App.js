@@ -16,7 +16,7 @@ function App() {
         <Route path="movies/" element={<MoviesPage />} />
         <Route
           path="/movies/:movieId"
-          element={<MovieDetailsPage props={Routes} />}
+          element={<MovieDetailsPage animate={true} />}
         />
         <Route path="*" element={<NotFound />} />
       </Routes>
