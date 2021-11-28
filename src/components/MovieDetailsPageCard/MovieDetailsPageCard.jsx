@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
+import { NavLink, Route, Routes } from "react-router-dom";
 import { fetchDetailsMovie } from "../../components/API/Api";
+import Cast from "../Cast/Cast";
+import Reviews from "../Reviews/Reviews";
 
 function MovieDetailsPageCard() {
   const [movie, setMovie] = useState([]);
@@ -45,7 +48,20 @@ function MovieDetailsPageCard() {
           </ul>
         </div>
       )}
-      ;
+
+      <ul>
+        <li>
+          <NavLink to={`cast`}>Cast</NavLink>
+        </li>
+        <li>
+          <NavLink to="reviews">Reviews</NavLink>
+        </li>
+      </ul>
+
+      <Routes>
+        <Route path="cast" element={<Cast animate />} />
+        <Route path="reviews" element={<Reviews animate />} />
+      </Routes>
     </>
   );
 }

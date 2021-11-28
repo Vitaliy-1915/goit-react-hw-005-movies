@@ -29,3 +29,35 @@ export const fetchDetailsMovie = async (movieId) => {
     console.error(error);
   }
 };
+
+export const fetchCastMovie = async (movieId) => {
+  // console.log(movieId);
+  try {
+    const CastMovie = await axios
+      .get(
+        `${BASE_URL}/movie/${movieId}/credits?api_key=${API_KEY}&language=en-US`
+      )
+      // .then(response =>  console.log(response.data))
+      .then(({ data }) => data.cast);
+    // console.log(CastMovie);
+    return CastMovie;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+export const fetchReviewsMovie = async (movieId) => {
+  console.log(movieId);
+  try {
+    const ReviewsMovie = await axios
+      .get(
+        `${BASE_URL}/movie/${movieId}/reviews?api_key=${API_KEY}&language=en-US&page=1`
+      )
+      // .then(response =>  console.log(response.data))
+      .then(({ data }) => data.results);
+    console.log(ReviewsMovie);
+    return ReviewsMovie;
+  } catch (error) {
+    console.error(error);
+  }
+};

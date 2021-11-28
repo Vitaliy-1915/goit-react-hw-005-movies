@@ -1,17 +1,16 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 function InfoPage() {
   return (
     <div>
-      <ul>
+      {/* <ul>
         <li>
-          <NavLink to="/movies/:movieId/cast">Cast</NavLink>
+          <NavLink to="cast">Cast</NavLink>
         </li>
         <li>
-          <NavLink to="/movies/:movieId/reviews">Reviews</NavLink>
+          <NavLink to="movies/:movieId/reviews">Reviews</NavLink>
         </li>
-      </ul>
+      </ul> */}
     </div>
   );
 }

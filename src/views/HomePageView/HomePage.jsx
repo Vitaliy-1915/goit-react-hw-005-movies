@@ -11,7 +11,7 @@ function HomePage() {
 
   return (
     <>
-      <h1>Home Page </h1>
+      <h1>Trending today</h1>
       <ul>
         {movies.map((movie) => (
           <li key={movie.id}>
