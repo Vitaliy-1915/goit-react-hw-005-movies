@@ -28,7 +28,7 @@ function SearchBar({ onSubmit }) {
           value={MovieName}
           onChange={handleFormChange}
           placeholder="Search Movies"
-          autocomplete="off"
+          // autocomplete="off"
         />
         <button type={"submit"}>
           <span>Search</span>
