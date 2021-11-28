@@ -19,8 +19,8 @@ function Reviews() {
         {reviews &&
           reviews.map((review) => (
             <li key={review.id}>
-              Author: {review.author} <br />
-              {review.content}
+              <p> Author: {review.author}</p>
+              <p>{review.content}</p>
             </li>
           ))}
       </ul>

@@ -27,9 +27,8 @@ function Cast() {
                 }
                 alt={cast.original_name}
               />{" "}
-              <br />
-              {cast.original_name} <br />
-              Character: {cast.character}
+              <p>{cast.original_name} </p>
+              <p>Character: {cast.character}</p>
             </li>
           ))}
       </ul>

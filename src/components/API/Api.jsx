@@ -47,7 +47,7 @@ export const fetchCastMovie = async (movieId) => {
 };
 
 export const fetchReviewsMovie = async (movieId) => {
-  console.log(movieId);
+  // console.log(movieId);
   try {
     const ReviewsMovie = await axios
       .get(
@@ -55,7 +55,7 @@ export const fetchReviewsMovie = async (movieId) => {
       )
       // .then(response =>  console.log(response.data))
       .then(({ data }) => data.results);
-    console.log(ReviewsMovie);
+    // console.log(ReviewsMovie);
     return ReviewsMovie;
   } catch (error) {
     console.error(error);
