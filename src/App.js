@@ -14,7 +14,9 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="movies/*" element={<MoviesPage />} />
+        <Route path="movies/*" element={<MoviesPage />}>
+          {/* <Route path="?query=MovieName" element={<MoviesPage/>} /> */}
+        </Route>
         <Route
           path="movies/:movieId/*"
           element={<MovieDetailsPage animate={true} />}

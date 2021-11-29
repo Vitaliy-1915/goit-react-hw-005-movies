@@ -17,7 +17,7 @@ export const fetchTrendingMovies = async () => {
 };
 
 export const fetchSearchMovies = async (MovieName) => {
-  console.log(MovieName);
+  // console.log(MovieName);
   try {
     const searchFilms = await axios
       .get(

@@ -30,6 +30,7 @@ function SearchBar({ onSubmit }) {
           placeholder="Search Movies"
           // autocomplete="off"
         />
+
         <button type={"submit"}>
           <span>Search</span>
         </button>

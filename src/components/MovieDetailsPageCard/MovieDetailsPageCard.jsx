@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
-import { NavLink, Route, Routes, useNavigate } from "react-router-dom";
+import {
+  NavLink,
+  Route,
+  Routes,
+  useNavigate,
+  Navigate,
+  useLocation,
+} from "react-router-dom";
 import { fetchDetailsMovie } from "../../components/API/Api";
 import Cast from "../Cast/Cast";
 import Reviews from "../Reviews/Reviews";
@@ -8,6 +15,13 @@ import Reviews from "../Reviews/Reviews";
 function MovieDetailsPageCard() {
   const [movie, setMovie] = useState([]);
   const navigate = useNavigate();
+  let location = useLocation();
+  console.log(location.pathname);
+
+  const handleClick = () => {
+    navigate({ ...location.pathname });
+    //  return <Navigate to="/" replace state={movie} />;
+  };
 
   let params = useParams();
   const { movieId } = params;
@@ -20,9 +34,10 @@ function MovieDetailsPageCard() {
     <>
       {movie && (
         <div>
-          <button type="button" onClick={() => navigate(-1)}>
+          <button type="button" onClick={handleClick}>
             Go back
-          </button>{" "}
+          </button>
+
           <br />
           <img
             src={
