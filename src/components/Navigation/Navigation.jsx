@@ -10,7 +10,6 @@ function Navigation() {
         <li>
           <NavLink to="movies/">Movies</NavLink>
         </li>
-        {/* <li><NavLink to='movies/:movieId'>Movie Details</NavLink></li> */}
       </ul>
     </>
   );

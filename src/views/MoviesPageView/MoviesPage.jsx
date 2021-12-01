@@ -1,14 +1,17 @@
 import { useState, useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { fetchSearchMovies } from "../../components/API/Api";
 import SearchBar from "../../components/SearchBar/SearchBar";
+import MoviesList from "../../components/MoviesList/MoviesList";
 
 function MoviesPage() {
   const [MovieName, setMovieName] = useState(null);
   const [movies, setMovies] = useState([]);
 
+  let navigate = useNavigate();
+  // console.log(navigate);
   let location = useLocation();
-  console.log(location.pathname);
+  // console.log(location);
 
   useEffect(() => {
     if (MovieName === null) {
@@ -21,22 +24,15 @@ function MoviesPage() {
   const formSubmit = (MovieName) => {
     setMovieName(null);
     setMovieName(MovieName);
+
+    navigate({ ...location, search: `qwery=${MovieName}` });
   };
 
   return (
     <div>
-      <h1>juninjlkkkkl</h1>
       <SearchBar onSubmit={formSubmit} />
 
-      {movies && (
-        <ul>
-          {movies.map((movie) => (
-            <li key={movie.id}>
-              <NavLink to={`${movie.id}`}> {movie.original_title} </NavLink>
-            </li>
-          ))}
-        </ul>
-      )}
+      {movies && <MoviesList movies={movies} />}
     </div>
   );
 }

@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom";
 import HomePage from "./views/HomePageView/HomePage";
 import MoviesPage from "./views/MoviesPageView/MoviesPage";
 import MovieDetailsPage from "./views/MovieDetailsPageView/MovieDetailsPage";
-// import Cast from './components/Cast/Cast';
 import NotFound from "./views/NotFound/NotFound";
 import Navigation from "./components/Navigation/Navigation";
 import "./App.css";
@@ -14,9 +13,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="movies/*" element={<MoviesPage />}>
-          {/* <Route path="?query=MovieName" element={<MoviesPage/>} /> */}
-        </Route>
+        <Route path="movies/*" element={<MoviesPage />} />
         <Route
           path="movies/:movieId/*"
           element={<MovieDetailsPage animate={true} />}
