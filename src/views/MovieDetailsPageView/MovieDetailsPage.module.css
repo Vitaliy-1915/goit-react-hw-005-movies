@@ -1,0 +1,65 @@
+.button {
+  width: 40vmin;
+  padding: 5px;
+  margin: 10px;
+  background-color: rgb(176, 218, 218);
+  color: fff;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.img {
+  width: 50vmin;
+  height: 500px;
+  margin: 10px;
+}
+
+.detailsPage {
+  display: flex;
+}
+
+.detailsPageH2 {
+  color: fff;
+  font-weight: 700;
+  font-size: 50px;
+  margin: 0;
+}
+
+.p {
+  margin: 20px 40px 20px 10px;
+  color: fff;
+  font-size: 24px;
+  line-height: 1.42;
+  font-weight: 500;
+}
+
+.detailsPageH3 {
+  font-weight: 500;
+  font-size: 30px;
+  margin: 0;
+}
+
+.li {
+  /* list-style: inside; */
+  color: fff;
+  font-size: 24px;
+  line-height: 1.42;
+  font-weight: 500;
+}
+
+.informationList {
+  border-bottom: solid 1px;
+  border-top: solid 1px;
+  display: flex;
+  margin: 30px 30px 5px 30px;
+  list-style: none;
+}
+
+.linkDetailsPage {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 20px;
+  color: #0a69c9;
+}

@@ -9,9 +9,7 @@ function MoviesPage() {
   const [movies, setMovies] = useState([]);
 
   let navigate = useNavigate();
-  // console.log(navigate);
   let location = useLocation();
-  // console.log(location);
 
   useEffect(() => {
     if (MovieName === null) {
@@ -22,7 +20,7 @@ function MoviesPage() {
   }, [MovieName]);
 
   const formSubmit = (MovieName) => {
-    setMovieName(null);
+    // setMovieName(null);
     setMovieName(MovieName);
 
     navigate({ ...location, search: `qwery=${MovieName}` });

@@ -1,8 +1,21 @@
-/* .App {
-  text-align: center;
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 20px;
+  color: #0a69c9;
 }
 
-.App-logo {
+.active {
+  color: #128625;
+}
+
+/* .App {
+  text-align: center;
+} */
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }

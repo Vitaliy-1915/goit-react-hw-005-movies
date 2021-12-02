@@ -12,7 +12,7 @@ function SearchBar({ onSubmit }) {
     }
 
     onSubmit(MovieName);
-    setMovieName("");
+    // setMovieName("");
   };
 
   const handleFormChange = (event) => {
