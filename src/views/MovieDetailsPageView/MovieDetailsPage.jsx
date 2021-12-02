@@ -17,8 +17,10 @@ function MovieDetailsPage() {
   let navigate = useNavigate();
   let location = useLocation();
   console.log(location.pathname);
-  // const pathname = location.state?.from?.pathname;
-  // const search = location.state?.from?.search;
+  const pathname = location.state?.from?.pathname;
+  const search = location.state?.from?.search;
+  console.log(pathname);
+  console.log(search);
 
   // const handleClick = () => {
   //   console.log(location.state.from);
