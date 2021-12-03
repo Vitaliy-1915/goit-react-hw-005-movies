@@ -1,4 +1,5 @@
 import { useState } from "react";
+import s from "../SearchBar/SearchBar.module.css";
 
 function SearchBar({ onSubmit }) {
   const [MovieName, setMovieName] = useState("");
@@ -12,7 +13,7 @@ function SearchBar({ onSubmit }) {
     }
 
     onSubmit(MovieName);
-    // setMovieName("");
+    setMovieName("");
   };
 
   const handleFormChange = (event) => {
@@ -21,8 +22,9 @@ function SearchBar({ onSubmit }) {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className={s.form} onSubmit={handleSubmit}>
         <input
+          className={s.input}
           type="text"
           name="MovieName"
           value={MovieName}

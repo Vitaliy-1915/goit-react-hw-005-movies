@@ -29,17 +29,17 @@ function MovieDetailsPage() {
 
   let params = useParams();
   const { movieId } = params;
-  console.log(params);
+  // console.log(params);
 
   useEffect(() => {
     fetchDetailsMovie(movieId).then(setMovie);
   }, [movieId]);
 
   const onClick = () => {
-    console.log(
-      `/movies/${movie.id}` === location.pathname ? () => navigate(-1) : "/"
-    );
-    console.log(`/movies/${movie.id}/*`);
+    // console.log(
+    //   `/movies/${movie.id}` === location.pathname ? () => navigate(-1) : "/"
+    // );
+
     `/movies/${movie.id}` === location.pathname ||
     `/movies/${movie.id}/*` === location.pathname
       ? navigate(-1)
