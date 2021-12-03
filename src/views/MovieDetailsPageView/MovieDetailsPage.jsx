@@ -16,11 +16,11 @@ function MovieDetailsPage() {
   const [movie, setMovie] = useState([]);
   let navigate = useNavigate();
   let location = useLocation();
-  console.log(location.pathname);
-  const pathname = location.state?.from?.pathname;
-  const search = location.state?.from?.search;
-  console.log(pathname);
-  console.log(search);
+
+  // const pathname = location.state?.from?.pathname;
+  // const search = location.state?.from?.search;
+  // console.log(pathname);
+  // console.log(search);
 
   // const handleClick = () => {
   //   console.log(location.state.from);
@@ -29,7 +29,7 @@ function MovieDetailsPage() {
 
   let params = useParams();
   const { movieId } = params;
-  // console.log(params);
+  console.log(params);
 
   useEffect(() => {
     fetchDetailsMovie(movieId).then(setMovie);
@@ -39,7 +39,11 @@ function MovieDetailsPage() {
     console.log(
       `/movies/${movie.id}` === location.pathname ? () => navigate(-1) : "/"
     );
-    `/movies/${movie.id}` === location.pathname ? navigate(-1) : navigate("/");
+    console.log(`/movies/${movie.id}/*`);
+    `/movies/${movie.id}` === location.pathname ||
+    `/movies/${movie.id}/*` === location.pathname
+      ? navigate(-1)
+      : navigate("/");
   };
 
   return (
@@ -91,12 +95,20 @@ function MovieDetailsPage() {
       <ul className={s.informationList}>
         <h3 className={s.detailsPageH3}>Additional information :</h3>
         <li>
-          <NavLink to="cast" className="link">
+          <NavLink
+            to="cast"
+            className="link"
+            style={({ isActive }) => ({ color: isActive ? "green" : "blue" })}
+          >
             Cast
           </NavLink>
         </li>
         <li>
-          <NavLink to="reviews" className="link">
+          <NavLink
+            to="reviews"
+            className="link"
+            style={({ isActive }) => ({ color: isActive ? "green" : "blue" })}
+          >
             Reviews
           </NavLink>
         </li>

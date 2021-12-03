@@ -6,12 +6,20 @@ function Navigation() {
     <>
       <ul className={s.navigationList}>
         <li>
-          <NavLink to="/" className="link">
+          <NavLink
+            to="/"
+            className="link"
+            style={({ isActive }) => ({ color: isActive ? "green" : "blue" })}
+          >
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink to="movies/" className="link">
+          <NavLink
+            to="movies/"
+            className="link"
+            style={({ isActive }) => ({ color: isActive ? "green" : "blue" })}
+          >
             Movies
           </NavLink>
         </li>

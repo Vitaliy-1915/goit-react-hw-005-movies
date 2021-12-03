@@ -30,7 +30,7 @@ function MoviesPage() {
     <div>
       <SearchBar onSubmit={formSubmit} />
 
-      {movies && <MoviesList movies={movies} />}
+      {movies && <MoviesList movies={movies} state={{ from: location }} />}
     </div>
   );
 }
