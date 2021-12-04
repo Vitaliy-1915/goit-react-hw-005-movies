@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { fetchSearchMovies } from "../../components/API/Api";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import MoviesList from "../../components/MoviesList/MoviesList";
@@ -7,8 +7,11 @@ import MoviesList from "../../components/MoviesList/MoviesList";
 function MoviesPage() {
   const [MovieName, setMovieName] = useState(null);
   const [movies, setMovies] = useState([]);
+  let [searchParams, setSearchParams] = useSearchParams();
 
-  let navigate = useNavigate();
+  console.log("searchParams", searchParams.get("qwery"));
+
+  // let navigate = useNavigate();
   let location = useLocation();
 
   useEffect(() => {
@@ -20,11 +23,17 @@ function MoviesPage() {
   }, [MovieName]);
 
   const formSubmit = (MovieName) => {
-    // setMovieName(null);
+    setSearchParams({ qwery: MovieName });
     setMovieName(MovieName);
-
-    navigate({ ...location, search: `qwery=${MovieName}` });
   };
+
+  // const formSubmit = (MovieName) => {
+  // setMovieName(null);
+  // console.log(MovieName);
+  // navigate({ ...location, search: `qwery=${MovieName}` });
+  //  setMovieName(MovieName);
+  // console.log(location);
+  // };
 
   return (
     <div>
